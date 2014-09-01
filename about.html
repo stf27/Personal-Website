@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--Reference: http://www.peterverkuilen.com/-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Personal Website!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Shelby Foegelle">
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    </head>
+    
+     <body>
+        <div id="loading">Page is loading...</div>
+        <div id="wrapper">
+            <header id="header">
+                <a href="index.html" id="siteTitle">Shelby Foegelle</a>
+                <div id="titleDescription">About</div>
+                <div id="dd" class="wrapper-dropdown-2">
+                    <ul class="dropdown">
+                        <li id="menuDesigns">
+                            <a id="projects" href="projects.html">Projects</a>
+                        </li>
+                        <li id="menuAbout">
+                            <a id="about" href="about.html">About</a>
+                        </li>
+                        <li id="menuHome">
+                            <a id="home" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    function DropDown(el) {
+                        this.dd = el;
+                        this.initEvents();
+                    }
+                    DropDown.prototype = {
+                        initEvents : function() {
+                            var obj = this;
+                            obj.dd.on('click', function(event){
+                                $(this).toggleClass('active');
+                                event.stopPropagation();
+                            });	
+                        }
+                    }
+                    $(function() {
+                        var dd = new DropDown( $('#dd') );
+                        $(document).click(function() {
+                            // all dropdowns
+                            $('.wrapper-dropdown-2').removeClass('active');
+                        });
+        
+                    });
+                </script>
+            </header>
+            <!--Header-->
+            <div id="aboutPicDiv">
+                <img id="aboutPic" src="http://placekitten.com/1920/1080">
+            </div>
+            <h1>Who am I?</h1>
+            <p id="whoAmISummary">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</p>
+            <div id="footer">
+                <div id="siteInfo">All content copyright © 2014 Shelby Foegelle</div>
+                <div id="extraInfo">@(^_^)@</div>
+            </div>
+            <!--Footer-->
+        </div>
+        <!--Wrapper-->
+        <script type="text/javascript">
+        $(window).load(function() {
+            // When the page has loaded
+            $("#wrapper").fadeIn(500);
+            $("#loading").hide();
+        });
+        </script>
+    </body>
+</html>

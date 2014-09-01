@@ -1,0 +1,563 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    background-image: url(img/witewall_3.png); 
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*End of CSS reset. Start of the structure.*/
+
+/******************************/
+/* Default Styles Start Here */
+/****************************/
+#loading {
+    padding-top: 10%;
+    text-align: center;
+}
+
+#wrapper {
+    display: block;
+    width: 55%;
+    min-width: 900px;
+    background-color: transparent;
+    margin: 0px auto;
+    padding: 10px 1%;
+    overflow: hidden;
+}
+
+/*The Header is the top section of the website where the nav lives*/
+#header {
+    padding: 0;
+    height: 40px;
+    margin: 40px 0px 18px;
+    width: 100%;
+    border-bottom: 1px solid #bec0c3;
+}
+
+#siteTitle {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 0px;
+    max-width: 300px;
+    padding-right: 14px;
+    height: 30px;
+    color: black;
+    font-weight: bolder;
+    float: left;
+    overflow: visible;
+}
+
+#titleDescription {
+    margin: 0px 0px 0px 0px;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 14px;
+    color: #333;
+    font-family: Times, serif;
+    font-weight: lighter;
+    max-width: 200px;
+    float: left;
+    border-left: 1px solid #bec0c3;
+}
+
+.wrapper-dropdown-2 {
+    display: block;
+    float: right;
+    line-height: 30px;
+    max-width: 300px;
+    padding: 3px 0px;
+    overflow: hidden;
+    font-weight: lighter;
+}
+
+.wrapper-dropdown-2 a {
+    color: #4c4c4c;
+    display: block;
+    line-height: 27px;
+    padding: 0px 0px 0px 10px;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.wrapper-dropdown-2 a:hover {
+    color: #bec0c3; 
+}
+
+#menuAbout {
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #bec0c3;
+}
+
+#menuDesigns {
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #bec0c3;
+}
+
+#menuHome {
+    float: left;
+}
+
+#heroImage {
+    max-width: 100%;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+}
+
+#hero {
+    max-width: 100%;
+    position: relative;
+}
+
+#mobileImage {
+    max-width: 100%;
+    position: relative;
+    display: none;
+}
+
+#mobile {
+    max-width: 100%;
+    position: relative;
+}
+
+#smallImageLeft {
+    max-width: 49%;
+    float: left;
+    margin-top: 18px;
+    padding: 0px 0px;
+    position: relative;
+}
+
+#smallImageRight {
+    max-width: 49%;
+    float: right;
+    margin-top: 18px;
+    padding: 0px 0px;
+    position: relative;
+}
+
+#subPictureLeft {
+    max-width: 100%;
+    position: relative; 
+}
+
+#subPictureRight {
+    max-width: 100%;
+    position: relative;
+}
+
+#footer {
+    width: 100%;
+    height: 48px;
+    float: left;
+    margin-top: 18px;
+    border-top: 1px solid #bec0c3;
+}
+
+#siteInfo {
+    padding-top: 5px;
+    float: left;
+    font-size: 11px;
+}
+
+#extraInfo {
+    padding-top: 5px;
+    float: right;
+    font-size: 11px;
+}
+
+/* Hover Effects */
+#hoverText {
+    display: none;
+    color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	position: relative;
+	z-index: 1;
+	padding: 7px 7px;
+    margin-top: -30px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+#wrapper img:hover + #hoverText{
+    display: block;
+}
+/* Hover effects End */
+
+/* Image Shadow */
+#wrapper img {
+	display: block;
+	-webkit-transition: all 0.5s;
+    -webkit-box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+/************************************/
+/* Projects Page Styles Start Here */
+/**********************************/
+#project1 {
+    max-width: 49%;
+    float: left;
+    padding: 18px 0px 0px;
+    position: relative;
+}
+
+#project2 {
+    max-width: 49%;
+    float: right;
+    padding: 18px 0px 0px;
+    position: relative;
+}
+
+#project3 {
+    max-width: 49%;
+    float: left;
+    margin-top: 18px;
+    padding: 0px 0px;
+    position: relative;
+}
+
+#project4 {
+    max-width: 49%;
+    float: right;
+    margin-top: 18px;
+    padding: 0px 0px;
+    position: relative;
+}
+
+#subProject1 {
+    max-width: 100%;
+    position: relative; 
+}
+
+#subProject2 {
+    max-width: 100%;
+    position: relative; 
+}
+
+#subProject3 {
+    max-width: 100%;
+    position: relative; 
+}
+
+#subProject4 {
+    max-width: 100%;
+    position: relative; 
+}
+
+#wrapper {
+    display:none;
+}
+
+/*********************************/
+/* About Page Styles Start Here */
+/*******************************/
+#aboutPicDiv {
+    max-width: 100%;
+    position: relative;
+}
+
+#aboutPic {
+    max-width: 100%;
+    position: relative;
+}
+
+h1 {
+    font-size: 38px;
+    max-width: 100%;
+    text-align: left;
+    line-height: 68px;
+    padding: 16px 0px 6px;
+}
+
+#whoAmISummary {
+    font-size: 17px;
+    max-width: 100%;
+    text-align: left;
+    line-height: 30px;
+    float: left;
+}
+
+@media screen and (max-width: 920px){
+    /******************************/
+    /* Default Styles Start Here */
+    /****************************/
+    #wrapper {
+        width: 95%;
+        min-width: 400px;
+    }
+    
+    #hoverText {
+        display: block;
+    }
+    
+    #header {
+        background-color: transparent;
+        height: 40px;
+        margin-top: 18px;
+    }
+    
+    #menuAbout {
+        border: none;
+    }
+    
+    #menuDesigns {
+        border: none;
+    }
+    
+    .wrapper-dropdown-2 {
+        position: relative;
+        width: 40px;
+        height: 30px;
+        margin-top: 1px;
+        padding: 0px 0px;
+        line-height: 18px;
+        background: #333 url(img/menuIcon.png) center;
+        cursor: pointer;
+        outline: none;
+        z-index: 2;
+        float: right;
+        overflow:visible;
+        border-radius: 4px;
+    }
+    
+    .wrapper-dropdown-2:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        margin-top: -3px;
+    }
+    
+    .wrapper-dropdown-2 .dropdown {
+      /* Size & position */
+        position: absolute;
+        top: 100%;
+        left: -60px;
+        width: 100px;
+        /* Styles */
+        background: transparent;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        list-style: none;
+        /* Hiding */
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .wrapper-dropdown-2 .dropdown li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        border: 4px solid #333;
+        padding: 6px;
+        transition: all 0.3s ease-out;
+        float: left;
+        background-color: #444;
+        width: 80px;
+        text-align: right;
+        border-radius: 4px;
+    }
+     
+    .wrapper-dropdown-2 .dropdown li:nth-child(1) a { 
+        border-left-color: #00ACED;
+    }
+    
+    .wrapper-dropdown-2 .dropdown li:nth-child(1):hover a { 
+        color: #00ACED;
+        margin-left: -10px;
+        background-color: #333;
+    }
+
+    .wrapper-dropdown-2 .dropdown li:nth-child(2) a {
+        border-left-color: #4183C4;
+    }
+    
+    .wrapper-dropdown-2 .dropdown li:nth-child(2):hover a {
+        color: #4183C4;
+        margin-left: -10px;
+        background-color: #333;
+    }
+     
+    .wrapper-dropdown-2 .dropdown li:nth-child(3) a {
+        border-left-color: #3B5998;
+    }
+    
+    .wrapper-dropdown-2 .dropdown li:nth-child(3):hover a {
+        color: #3B5998;
+        margin-left: -10px;
+        background-color: #333;
+    }
+     
+    .wrapper-dropdown-2 .dropdown li i {
+        margin-right: 5px;
+        color: inherit;
+        vertical-align: middle;
+    }
+     
+    /* Hover state */
+     
+    .wrapper-dropdown-2 .dropdown li:hover a {
+        /* Hover to move the boxes */
+    }
+    
+    .wrapper-dropdown-2.active:after {
+        border-width: 0 6px 6px 6px;
+    }
+     
+    .wrapper-dropdown-2.active .dropdown {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    /************************************/
+    /* Projects Page Styles Start Here */
+    /**********************************/
+    
+    /*********************************/
+    /* About Page Styles Start Here */
+    /*******************************/
+    
+}
+
+@media screen and (max-width: 450px){
+    /******************************/
+    /* Default Styles Start Here */
+    /****************************/
+    #wrapper {
+        width: 92%;
+        min-width: 270px;
+    }
+    
+    #header {
+        height: 67px;
+        margin-top: 0px;
+    }
+    
+    .wrapper-dropdown-2 {
+        top: -50px;
+    }
+    
+    #titleDescription {
+        float: none;
+        border: none;
+        padding: 0;
+    }
+    
+    #heroImage {
+        display: none;
+    }
+    
+    #mobileImage {
+        display: block;
+        float: left;
+        max-width: 100%;
+        margin-top: -4px;
+    }
+    
+    #smallImageLeft {
+        float: left;
+        max-width: 100%;
+        margin-top: 18px;
+    }
+
+    #smallImageRight {
+        float: left;
+        max-width: 100%;
+    }
+    
+    navigation ul, navigation:active ul { 
+		right: 1%;
+        top: 48px;
+	}
+    
+    /************************************/
+    /* Projects Page Styles Start Here */
+    /**********************************/
+    #project1 {
+        float: left;
+        max-width: 100%;
+        padding: 0px;
+    }
+    
+    #project2 {
+        float: left;
+        max-width: 100%;
+    }
+    
+    #project3 {
+        float: left;
+        max-width: 100%;
+        margin-top: 18px;
+    }
+    
+    #project4 {
+        float: left;
+        max-width: 100%;
+        margin-top: 18px;
+    }
+    
+    /*********************************/
+    /* About Page Styles Start Here */
+    /*******************************/
+    
+}

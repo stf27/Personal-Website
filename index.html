@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--Reference: http://www.peterverkuilen.com/-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Personal Website!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Shelby Foegelle">
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="loading">Page is loading...</div>
+        <div id="wrapper">
+            <header id="header">
+                <a href="index.html" id="siteTitle">Shelby Foegelle</a>
+                <div id="titleDescription">Web Design | 3D Design</div>
+                <div id="dd" class="wrapper-dropdown-2">
+                    <ul class="dropdown">
+                        <li id="menuDesigns">
+                            <a id="projects" href="projects.html">Projects</a>
+                        </li>
+                        <li id="menuAbout">
+                            <a id="about" href="about.html">About</a>
+                        </li>
+                        <li id="menuHome">
+                            <a id="home" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    function DropDown(el) {
+                        this.dd = el;
+                        this.initEvents();
+                    }
+                    DropDown.prototype = {
+                        initEvents : function() {
+                            var obj = this;
+                            obj.dd.on('click', function(event){
+                                $(this).toggleClass('active');
+                                event.stopPropagation();
+                            });	
+                        }
+                    }
+                    $(function() {
+                        var dd = new DropDown( $('#dd') );
+                        $(document).click(function() {
+                            // all dropdowns
+                            $('.wrapper-dropdown-2').removeClass('active');
+                        });
+        
+                    });
+                </script>
+            </header>
+            <!--Header-->
+            <a href="#" id="mobileImage">
+                <img id="mobile" src="http://placekitten.com/1620/1080">
+                <span id="hoverText">MAOWWWWWWW!!!</span>
+            </a>
+            <a href="#" id="heroImage">
+                <img id="hero" src="http://placekitten.com/1500/600">
+                <span id="hoverText">MAOWWWWWWW!!!</span>
+            </a>
+            <!--Hero Image-->
+            <a href="#" id="smallImageLeft">
+                <img id="subPictureLeft" src="http://placecage.com/g/1620/1080">
+                <span id="hoverText">Nomadic eyebrows</span>
+            </a>
+            <!--Lower Div 1-->
+            <a href="#" id="smallImageRight">
+                <img id="subPictureRight" src="http://fillmurray.com/1620/1080">
+                <span id="hoverText">Getting old...</span>
+            </a>
+            <!--Lower Div 2-->
+            <div id="footer">
+                <div id="siteInfo">All content copyright © 2014 Shelby Foegelle</div>
+                <div id="extraInfo">@(^_^)@</div>
+            </div>
+            <!--Footer-->
+        </div>
+        <!--Wrapper-->
+        <script type="text/javascript">
+        $(window).load(function() {
+            // When the page has loaded
+            $("#wrapper").fadeIn(500);
+            $("#loading").hide();
+        });
+        </script>
+    </body>
+</html>
